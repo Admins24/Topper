@@ -3,38 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cover Page Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Assignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 210mm; /* A4 size width */
+            height: 297mm; /* A4 size height */
+            padding: 20mm;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20mm;
+        }
+        .header img {
+            width: 100px; /* Adjust logo size */
+        }
+        .header h1 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        .header h2 {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20mm;
+        }
+        .content div {
+            width: 48%;
+        }
+        .content div h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer p {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="input-form">
-            <h2>Student Information</h2>
-            <form id="coverForm">
-                <label for="studentName">Full Name</label>
-                <input type="text" id="studentName" placeholder="Enter your full name" required>
-                <label for="studentId">Student ID</label>
-                <input type="text" id="studentId" placeholder="Enter your student ID" required>
-                <label for="department">Department</label>
-                <input type="text" id="department" placeholder="Enter your department" required>
-                <button type="submit">Generate Cover Page</button>
-            </form>
+        <!-- Header Section -->
+        <div class="header">
+            <img src="logo.png" alt="University Logo"> <!-- Replace logo.png with your actual logo file -->
+            <h1>JAMALPUR SCIENCE AND TECHNOLOGY UNIVERSITY</h1>
+            <h2>DEPARTMENT OF MATHEMATICS</h2>
+            <h3>Assignment</h3>
+            <p>Course Title: Mathematical Statistics</p>
+            <p>Course Code: STA 1241</p>
         </div>
-        
-        <div class="preview">
-            <div class="university-logo">
-                <img src="university-logo.png" alt="University Logo">
-                <h1>JAMALPUR SCIENCE AND TECHNOLOGY UNIVERSITY</h1>
+
+        <!-- Content Section -->
+        <div class="content">
+            <div>
+                <h3>Submitted By</h3>
+                <p>1<sup>st</sup> Year 2<sup>nd</sup> Semester<br>Session: 2023-2024<br>Department of Mathematics</p>
             </div>
-            <div class="cover-page">
-                <h2>Cover Page</h2>
-                <p><strong>Submitted By:</strong> <span id="namePreview"></span></p>
-                <p><strong>Student ID:</strong> <span id="idPreview"></span></p>
-                <p><strong>Department:</strong> <span id="departmentPreview"></span></p>
+            <div>
+                <h3>Submitted To</h3>
+                <p>Md Zahidul Alam<br>Assistant Professor (Statistics)<br>Jamalpur Science & Technology University, Jamalpur</p>
             </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>Submission Date: 21-09-2025</p>
+            <p>Jamalpur Science & Technology University</p>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
